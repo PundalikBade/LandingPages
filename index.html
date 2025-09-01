@@ -139,7 +139,7 @@
   <script>
   // Instead of COUNT + auto loop, define your pages here
 const pages = [
-  { title: "Page 1", file: "page1/index.html", thumb: "" },
+     { title: "Page 1", file: "page1/index.html", thumb: "imagess/dis.png" },
   { title: "Landing Page 2", file: "page2.html", thumb: "thumb-2.jpg" },
   { title: "My Cool Landing", file: "my-cool-landing.html", thumb: "thumb-cool.jpg" }
 ];
@@ -153,6 +153,7 @@ function makeCard(page) {
   const url = `${BASE}/${page.file}`;
   const a = document.createElement('a');
   a.href = url;
+  a.target = "_blank"; // optional: open in new tab
 
   const card = document.createElement('div');
   card.className = 'card';
@@ -163,12 +164,12 @@ function makeCard(page) {
 
   if (page.thumb) {
     const img = new Image();
-    img.src = `${BASE}/thumbs/${page.thumb}`;
+    img.src = page.thumb; // use exact path
     img.onload = () => {
       thumbDiv.innerHTML = '';
       thumbDiv.appendChild(img);
       img.style.width = '100%';
-      img.style.height = '100%';
+      img.style.height = 'auto';
       img.style.objectFit = 'cover';
     };
     img.onerror = () => { thumbDiv.textContent = page.title; };

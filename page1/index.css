@@ -1,43 +1,52 @@
-*{
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+.content {
+    width: 60%;
+    max-width: 610px;
+    margin: 64px auto;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    line-height: 1.6;
+    text-align: center; /* center heading and paragraph */
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    color: #333;
 }
 
-.content{
-	width: 50%; /* Or any specific width */
-        margin: 64px auto;
-	
-	align-items: center;
-	font-family: Arial, Helvetica, sans-serif;
-
-	font-size:31px;
-	line-height: 0.2%x;
-height: 355px;
-width: 610px;
-text-align: justify;
-
-}
-h1{
-	  margin-bottom: 24px;
-
-}
-p{
-	  margin-bottom: 24px;
-	  color: gray;
-
+.content button {
+    padding: 12px 24px;
+    font-size: 18px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: #0077ff;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
-button{
-	  margin-bottom: 24px;
-	  background-color: black;
-	  color: white;
-	  padding: 15px 30px;
-	  border: 1px solid red;
-	  border-radius: 20px;
-	  justify-items: center;
-	  display: block;
-	  margin: 0 auto;
-	
+.content button:hover {
+    background-color: #005ecc;
+}
 
+.images-container {
+    display: flex;
+    flex-wrap: wrap; /* wraps to next line if not enough space 
+	*/
+    justify-content: center; /* horizontal centering */
+    gap: 20px; /* space between images */
+    margin: 40px auto;
+    max-width: 1200px;
+}
+
+.images-container img {
+    width: 250px; /* size of each image */
+    height: auto;
+    border-radius: 10px; /* rounded corners */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.images-container img:hover {
+    transform: scale(1.05); /* subtle zoom on hover */
 }
