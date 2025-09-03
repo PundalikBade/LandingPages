@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.contant {
+  display: flex;
+  align-items: center;   /* vertically align text + images */
+  justify-content: space-between; /* push text left, images right */
+  gap: 60px;   
+  padding: 50px 80px;    /* balanced spacing */
+}
+
+.top {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  max-width: 480px;
+  line-height: 1.5;       /* better text readability */
+}
+
+.top h1 {
+  font-size: 50px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.top p {
+  margin-top: 0;          /* no double spacing */
+  margin-bottom: 20px;
+  color: #555;            /* softer gray for better contrast */
+}
+
+.top button {
+  padding: 12px 28px;
+  background-color: black;
+  color: white;
+  font-size: 16px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.top button:hover {
+  background-color: #333;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+
+.img-container {
+  position: relative;  
+  width: 900px;        /* wider so both images fit */
+  height: 600px;
+}
+
+.img-container .img1 {
+  position: absolute;
+  width: 350px;
+  height: auto;
+  top: 0;
+  left: 0;
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.img-container .img2 {
+  position: absolute;
+  width: 350px;
+  height: auto;
+  top: 100px;   /* slightly below */
+  left: 400px;  /* not too far right */
+  border-radius: 16px;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Subtle hover lift */
+.img-container img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 14px 28px rgba(0,0,0,0.35);
+}
+
+
+.img-flex {
+  display: flex;
+  gap: 40px;              /* space between items */
+  justify-content: center; /* center the row */
+  padding: 20px;
+}
+
+.img-item {
+  display: flex;
+  flex-direction: column;  /* number on top, image below */
+  align-items: center;     /* center content horizontally */
+  gap: 10px;
+}
+
+.img-item h1 {
+  font-size: 16px;
+  color: gray;
+  margin: 0;
+}
+
+.img-item img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;       /* crop nicely */
+  border-radius: 12px;
+}
+
+
+
